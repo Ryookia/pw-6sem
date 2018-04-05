@@ -36,19 +36,6 @@ namespace Durczak.AplikacjaWielowarstowa.UI
                         System.Console.WriteLine(product.ToString());
                     }
                     break;
-                case "420":
-                    System.Console.WriteLine("Ayyy lmao");
-                    break;
-                case "train":
-                    System.Console.WriteLine(
-@"         (
-     '( \'
-    '''  //}
-   (''''
-   _ ||__  ___  ___  ____  ____
-  (o)____) }___} ___} ___} }___}
-  'U'0  0  0   0    0    0 0   0  ");
-                    break;
                 case "help":
                     PrintHelp();
                     break;
