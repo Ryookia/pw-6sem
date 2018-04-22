@@ -2,9 +2,9 @@
 
 namespace Durczak.AplikacjaWielowarstowa.UI
 {
-    class MainClass
+    public class MainClass
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             var userInterface = new ConsoleInterface();
             userInterface.LaunchInterface();

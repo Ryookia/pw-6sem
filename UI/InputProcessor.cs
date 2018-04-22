@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Durczak.AplikacjaWielowarstowa.Interfaces;
 
 namespace Durczak.AplikacjaWielowarstowa.UI
@@ -26,14 +27,17 @@ namespace Durczak.AplikacjaWielowarstowa.UI
                     var producerList = _logicController.GetAllProducers();
                     foreach (var producer in producerList)
                     {
-                        System.Console.WriteLine(producer.ToString());
+                        Console.WriteLine("Id: {0}, Name: {1}, Origin Country: {2}", producer.Id, producer.Name, producer.CountryOrigin);
+                        //System.Console.WriteLine(producer.ToString());
                     }
                     break;
                 case "2":
                     var productList = _logicController.GetAllProducts();
                     foreach (var product in productList)
                     {
-                        System.Console.WriteLine(product.ToString());
+                        Console.WriteLine("Id: {0}, Name: {1}, Propulsion: {2}, Material: {3}, Velocity: {4} fps, Producer Id: {5} ", 
+                            product.Id, product.Name, product.Propulsion, product.Material, product.Velocity, product.ProducerId);
+                       // System.Console.WriteLine(product.ToString());
                     }
                     break;
                 case "help":

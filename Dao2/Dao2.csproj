@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4672DDF1-514B-48BD-90B2-48C11F874373}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>Durczak.AplikacjaWielowarstowa.UI</RootNamespace>
-    <AssemblyName>UI</AssemblyName>
+    <ProjectGuid>{566BAC4B-BEC3-46B3-A46C-755C6E5D9271}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Durczak.AplikacjaWielowarstowa.Dao2</RootNamespace>
+    <AssemblyName>Dao2</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -42,39 +40,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConsoleInterface.cs" />
-    <Compile Include="InputProcessor.cs" />
-    <Compile Include="MainClass.cs" />
+    <Compile Include="DaoMock2.cs" />
+    <Compile Include="Producer.cs" />
+    <Compile Include="ProducerBuilder.cs" />
+    <Compile Include="Product.cs" />
+    <Compile Include="ProductBuilder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-      <DependentUpon>Settings.settings</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\BL\BL.csproj">
-      <Project>{1155d112-37ed-4b52-9698-665c3f1e5de2}</Project>
-      <Name>BL</Name>
-    </ProjectReference>
     <ProjectReference Include="..\CORE\Core.csproj">
       <Project>{9a6a1a0f-4cd2-45a0-8917-aa63230f11ef}</Project>
       <Name>Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Dao2\Dao2.csproj">
-      <Project>{566bac4b-bec3-46b3-a46c-755c6e5d9271}</Project>
-      <Name>Dao2</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DAO\Dao.csproj">
-      <Project>{e9976912-a1fd-41e8-988f-16f942727f6f}</Project>
-      <Name>Dao</Name>
     </ProjectReference>
     <ProjectReference Include="..\INTERFACES\Interfaces.csproj">
       <Project>{7d93504c-b4cc-479b-97cc-f399d6b08326}</Project>

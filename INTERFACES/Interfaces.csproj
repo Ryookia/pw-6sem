@@ -46,5 +46,11 @@
     <Compile Include="IProduct.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CORE\Core.csproj">
+      <Project>{9a6a1a0f-4cd2-45a0-8917-aa63230f11ef}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

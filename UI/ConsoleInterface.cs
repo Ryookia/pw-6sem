@@ -12,7 +12,7 @@ namespace Durczak.AplikacjaWielowarstowa.UI
 
         public ConsoleInterface()
         {
-            _logicController = new LogicController();
+            _logicController = new LogicController(Properties.Settings.Default.database_name);
             _inputProcessor = new InputProcessor(_logicController);
         }
 
