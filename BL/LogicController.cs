@@ -18,7 +18,23 @@ namespace Durczak.AplikacjaWielowarstowa.BL
         public LogicController(string databaseName)
         {
             var dllPath = Directory.GetCurrentDirectory() + @"\" + databaseName;
-            var assembly = Assembly.LoadFrom(dllPath);
+            Assembly assembly = null;
+            try
+            {
+                assembly = Assembly.LoadFrom(dllPath);
+            }
+            catch (FileNotFoundException e)
+            {
+                Console.WriteLine("Unable to find database file, add database dll into the release folder");
+                Console.WriteLine(e.StackTrace);
+                System.Environment.Exit(1);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.StackTrace);
+                System.Environment.Exit(1);
+            }
+             
             var daoFound = false;
             foreach (var type in assembly.GetTypes())
             {
